@@ -5,16 +5,19 @@
 ### 作成
 [str(object)の結果]()
 ### メソッド
+> 三輪さん
 1. capitalize()
 1. casefold()
 1. center(width\[,fillchar])
 1. count(sub\[,start\[,end]]
 1. encode(encodding, errors)
+> 義之
 1. endswith(suffix\[,start\,end]])
 1. expandtabs(tabsize)
 1. find(sub\[,start\[,end]])
 1. format(*args, *kwargs)
 1. format_map(mapping)
+> 浦
 1. index(sub\[,start\[,end]])
 1. isalnum()
 1. isalpha()
