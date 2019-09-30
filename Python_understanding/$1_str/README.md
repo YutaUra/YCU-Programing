@@ -11,7 +11,7 @@
 1. center(width\[,fillchar])
 1. count(sub\[,start\[,end]]
 1. encode(encodding, errors)
-> 義之
+> 義幸
 1. endswith(suffix\[,start\,end]])
 1. expandtabs(tabsize)
 1. find(sub\[,start\[,end]])
@@ -23,6 +23,7 @@
 1. isalpha()
 1. isascii()
 1. isdecimal()
+
 1. isdigit()
 1. isidentifier()
 1. islower()
