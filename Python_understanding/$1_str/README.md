@@ -23,7 +23,7 @@
 1. isalpha()
 1. isascii()
 1. isdecimal()
-
+> 未定
 1. isdigit()
 1. isidentifier()
 1. islower()
