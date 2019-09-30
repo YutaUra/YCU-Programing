@@ -11,7 +11,7 @@
 1. center(width\[,fillchar])
 1. count(sub\[,start\[,end]]
 1. encode(encodding, errors)
-> 義幸
+> 義幸[終わった](https://docs.python.org/ja/3/library/stdtypes.html#str)
 1. endswith(suffix\[,start\,end]])
 1. expandtabs(tabsize)
 1. find(sub\[,start\[,end]])
