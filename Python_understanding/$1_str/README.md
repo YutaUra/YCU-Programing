@@ -17,7 +17,7 @@
 1. find(sub\[,start\[,end]])
 1. format(*args, *kwargs)
 1. format_map(mapping)
-> 浦
+> [浦](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_3_ura.ipynb)
 1. index(sub\[,start\[,end]])
 1. isalnum()
 1. isalpha()
