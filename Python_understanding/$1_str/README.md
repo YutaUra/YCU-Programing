@@ -6,7 +6,6 @@
 [str(object)の結果]()
 ### メソッド
 > 三輪さん[1](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_1_miwa.ipynb)[2](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/oyasirazu1'-checkpoint.ipynb)
-
 1. capitalize()
 1. casefold()
 1. center(width\[,fillchar])
@@ -24,22 +23,25 @@
 1. isalpha()
 1. isascii()
 1. isdecimal()
-> 未定
+> 三輪
 1. isdigit()
 1. isidentifier()
 1. islower()
 1. isnumeric()
 1. isprintable()
+> 室井
 1. isspace()
 1. istitle()
 1. isupper()
 1. join(iterable)
 1. ljust(width\[,fillchar])
+> 浦
 1. lower()
 1. lstrip(\[chars])
 1. static maketrans(x\[,y\[,z]]])
 1. partition(sep)
 1. replace(old, new\[,count])
+> 未定
 1. rfind(sub\[,start\[,end]])
 1. rindex(sub\[,start\[,end]])
 1. rjust(width\[,fillchar])
