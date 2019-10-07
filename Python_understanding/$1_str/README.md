@@ -5,7 +5,8 @@
 ### 作成
 [str(object)の結果]()
 ### メソッド
-> 三輪さん
+> 三輪さん[1](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_1_miwa.ipynb)[2](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/oyasirazu1'-checkpoint.ipynb)
+
 1. capitalize()
 1. casefold()
 1. center(width\[,fillchar])
