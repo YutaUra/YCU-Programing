@@ -11,7 +11,7 @@
 1. center(width\[,fillchar])
 1. count(sub\[,start\[,end]]
 1. encode(encodding, errors)
-> [義幸](localhost:8890/notebooks/Untitled16.ipynb?kernel_name=python3)
+> 義幸
 1. endswith(suffix\[,start\,end]])
 1. expandtabs(tabsize)
 1. find(sub\[,start\[,end]])
