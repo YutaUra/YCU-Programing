@@ -35,7 +35,7 @@
 1. isupper()
 1. join(iterable)
 1. ljust(width\[,fillchar])
-> 浦
+> [浦](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_6_ura.ipynb)
 1. lower()
 1. lstrip(\[chars])
 1. static maketrans(x\[,y\[,z]]])
