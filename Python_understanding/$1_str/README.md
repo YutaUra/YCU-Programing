@@ -41,17 +41,19 @@
 1. static maketrans(x\[,y\[,z]]])
 1. partition(sep)
 1. replace(old, new\[,count])
-> 未定
+> 三輪
 1. rfind(sub\[,start\[,end]])
 1. rindex(sub\[,start\[,end]])
 1. rjust(width\[,fillchar])
 1. rpartition(sep)
 1. rsplit(sep, maxsplit)
+> 室井
 1. rstrip(\[chars])
 1. split(sep, maxsplit)
 1. splitlines(\[keepends])
 1. startwidth(prefix\[,start\[,end]])
 1. strip(\[chars])
+> 浦
 1. swapcase()
 1. title()
 1. translate(teble)
