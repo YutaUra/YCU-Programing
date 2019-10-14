@@ -23,7 +23,7 @@
 1. isalpha()
 1. isascii()
 1. isdecimal()
-> 三輪
+> [三輪](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_4_miwa.ipynb)
 1. isdigit()
 1. isidentifier()
 1. islower()
