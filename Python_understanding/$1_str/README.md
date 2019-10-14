@@ -29,7 +29,7 @@
 1. islower()
 1. isnumeric()
 1. isprintable()
-> 室井
+> [室井](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_5_muroi.ipynb)
 1. isspace()
 1. istitle()
 1. isupper()
