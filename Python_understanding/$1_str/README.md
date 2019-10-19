@@ -41,7 +41,7 @@
 1. static maketrans(x\[,y\[,z]]])
 1. partition(sep)
 1. replace(old, new\[,count])
-> 三輪
+> [三輪](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_7_miwa.ipynb)
 1. rfind(sub\[,start\[,end]])
 1. rindex(sub\[,start\[,end]])
 1. rjust(width\[,fillchar])
