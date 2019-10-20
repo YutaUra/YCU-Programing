@@ -53,12 +53,12 @@
 1. splitlines(\[keepends])
 1. startwidth(prefix\[,start\[,end]])
 1. strip(\[chars])
-> 浦
+> [浦](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_9_ura.ipynb)
 1. swapcase()
 1. title()
 1. translate(teble)
 1. upper()
 1. zfill(width)
 
-### printf形式の文字列書式化
+### [printf形式の文字列書式化](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%241_str/str_9_ura.ipynb)
 [公式](https://docs.python.org/ja/3/library/stdtypes.html#printf-style-string-formatting)
