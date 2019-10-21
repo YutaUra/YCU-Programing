@@ -3,25 +3,31 @@
 [公式](https://docs.python.org/ja/3/library/stdtypes.html#sequence-types-list-tuple-range)
 
 ## [共通の演算](https://docs.python.org/ja/3/library/stdtypes.html#common-sequence-operations)
+> 三輪さん
 1. x in s
 1. x not in s
 1. s + t
 1. s * n または n * s
 1. s[i]
+> 義幸
 1. s[i:j]
 1. s[i:j:k]
 1. len(s)
 1. min(s)
 1. max(s)
+> 室井
 1. s.index(x[, i[, j]])
 1. s.count(x)
-
+> イミュータブル：室井
+> ミュータブル: 浦
 ## [イミュータブル](https://docs.python.org/ja/3/library/stdtypes.html#immutable-sequence-types)と[ミュータブル](https://docs.python.org/ja/3/library/stdtypes.html#mutable-sequence-types)
 ### ミュータブルの共通メソッド
+> 浦
 1. s[i] = x
 1. s[i:j] = t
 1. del s[i:j]
 1. s[i:j:k] = t
+> 未定
 1. del s[i:j:k]
 1. s.append(x)
 1. s.clear()
