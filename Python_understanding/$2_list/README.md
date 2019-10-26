@@ -3,7 +3,7 @@
 [公式](https://docs.python.org/ja/3/library/stdtypes.html#sequence-types-list-tuple-range)
 
 ## [共通の演算](https://docs.python.org/ja/3/library/stdtypes.html#common-sequence-operations)
-> 三輪さん
+> [三輪](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%242_list/list_01_miwa.ipynb)
 1. x in s
 1. x not in s
 1. s + t
