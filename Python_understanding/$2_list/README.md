@@ -22,12 +22,11 @@
 > ミュータブル: [浦](https://github.com/YutaUra/YCU-Programing/blob/master/Python_understanding/%242_list/list_4_ura.ipynb)
 ## [イミュータブル](https://docs.python.org/ja/3/library/stdtypes.html#immutable-sequence-types)と[ミュータブル](https://docs.python.org/ja/3/library/stdtypes.html#mutable-sequence-types)
 ### ミュータブルの共通メソッド
-> 浦
+> 未定
 1. s[i] = x
 1. s[i:j] = t
 1. del s[i:j]
 1. s[i:j:k] = t
-> 未定
 1. del s[i:j:k]
 1. s.append(x)
 1. s.clear()
