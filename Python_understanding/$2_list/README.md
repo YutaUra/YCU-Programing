@@ -41,11 +41,14 @@
 1. s.reverse()
 
 ## list
+> 三輪
 1. [listの構成](https://docs.python.org/ja/3/library/stdtypes.html#list)
 1. sort
 
 ## tuple
+> 義幸
 1. [tupleの構成](https://docs.python.org/ja/3/library/stdtypes.html#tuple)
 
 ## range
+> 浦
 1. [rangeの構成](https://docs.python.org/ja/3/library/stdtypes.html#range)
