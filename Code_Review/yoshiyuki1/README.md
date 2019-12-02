@@ -4,7 +4,4 @@ Pythonの基礎機能
 print("Hello World!")
 ```
 
-```python
-tuple((1,2,3))
-```
-
+家計簿を作りたいです、、
