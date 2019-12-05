@@ -1,0 +1,12 @@
+{% load filter %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>{{ title }}</title>
+</head>
+
+<body>
+{{ content | markdown_to_html }}
+</body>
+</html>
