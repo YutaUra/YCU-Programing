@@ -1,5 +1,9 @@
 venv
 .idea
 
+static
+media
+!/site_page/static/
+
 *.pyc
 db.sqlite3
