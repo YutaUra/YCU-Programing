@@ -1,3 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
+from django.views import generic
+from .models import PageContent
 
-# Create your views here.
+
+class BaseView(generic.TemplateView):
+    template_name = 'site_page/base.html'
+
+
+class TestView(generic.TemplateView):
+    template_name = 'site_page/base.html'
+
+    def get(self, request, *args, **kwargs):
+        print(kwargs.get('path', ''))
+        return super().get(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        path = kwargs.get('path', '')
+        page_content = get_object_or_404(PageContent, page__path=path)
+        context.update(title=page_content.page.title)
+        context.update(content=page_content.text)
+        return context
