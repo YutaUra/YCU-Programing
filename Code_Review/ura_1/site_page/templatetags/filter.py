@@ -6,15 +6,19 @@ from markdownx.settings import (
     MARKDOWNX_MARKDOWN_EXTENSIONS,
     MARKDOWNX_MARKDOWN_EXTENSION_CONFIGS
 )
+import re
 from markdown.extensions import Extension
 
 register = template.Library()
 
 
-@register.filter
-def markdown_to_html(text):
-    """マークダウンをhtmlに変換する。"""
-    return mark_safe(markdownify(text))
+@register.inclusion_tag('site_page/filter/html.html', takes_context=True)
+def markdown_to_html(context, core: dict, md):
+    for key, value in core.items():
+        md = re.sub(r'{{\s*(core\.' + key + r')\s*}}', value, md)
+    return {
+        'content': mark_safe(markdownify(md)),
+    }
 
 
 class EscapeHtml(Extension):

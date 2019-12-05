@@ -38,6 +38,8 @@
     <link rel="stylesheet" href="{% static 'site_page/assets/css/responsive.css' %}"/>
 
     <script src="{% static 'site_page/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'site_page/content.css' %}">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -60,14 +62,14 @@
 <div class="culmn">
     <!--Home page style-->
 
-    {% nav %}
+    {% nav core=core %}
 
     <div class="container">
         <div class="row">
             <div class="main_featured m-top-100">
                 <div class="col-sm-12">
-                    <div class="head_title text-center">
-                        {{ content | markdown_to_html }}
+                    <div class="head_title text-center" id="main_content">
+                        {% markdown_to_html core=core md=content %}
                     </div>
                 </div>
             </div>
