@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.http import HttpRequest
 from django.template.response import TemplateResponse
 from core.models import Setting
@@ -16,5 +15,5 @@ class RenderingMiddleware:
 
     @staticmethod
     def process_template_response(request: HttpRequest, response: TemplateResponse):
-        response.context_data.update(dict(Setting.objects.values_list('key', 'value')))
+        response.context_data.update(dict(core=dict(Setting.objects.values_list('key', 'value'))))
         return response
