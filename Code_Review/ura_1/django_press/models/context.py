@@ -14,6 +14,3 @@ class Context(models.Model):
             self.value = self.key
         super().save(force_insert, force_update, using, update_fields)
 
-
-def create_initial_settings(sender, **kwargs):
-    Context.objects.get_or_create(key='site_name')
