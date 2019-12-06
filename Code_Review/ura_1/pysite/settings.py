@@ -36,7 +36,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'core.middleware.setting.RenderingMiddleware',
+    'django_press.middleware.RenderingMiddleware',
 ]
 
 ROOT_URLCONF = 'pysite.urls'
