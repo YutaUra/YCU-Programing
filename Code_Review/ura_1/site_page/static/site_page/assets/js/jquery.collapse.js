@@ -2,7 +2,7 @@
  * Collapse plugin for jQuery
  * --
  * source: http://github.com/danielstocks/jQuery-Collapse/
- * site: http://webcloud.se/jQuery-Collapse
+ * django_press: http://webcloud.se/jQuery-Collapse
  *
  * @author Daniel Stocks (http://webcloud.se)
  * Copyright 2013, Daniel Stocks
