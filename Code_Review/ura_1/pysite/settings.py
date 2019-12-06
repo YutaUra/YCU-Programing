@@ -23,8 +23,8 @@ INSTALLED_APPS = [
     'polymorphic',
     'markdownx',
 
-    'core.apps.CoreConfig',
-    'site_page.apps.SitePageConfig',
+    'django_press.apps.DjangoPressConfig',
+
 ]
 
 MIDDLEWARE = [

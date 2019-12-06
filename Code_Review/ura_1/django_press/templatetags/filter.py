@@ -12,7 +12,7 @@ from markdown.extensions import Extension
 register = template.Library()
 
 
-@register.inclusion_tag('site_page/filter/html.html', takes_context=True)
+@register.inclusion_tag('django_press/filter/html.html', takes_context=True)
 def markdown_to_html(context, core: dict, md):
     for key, value in core.items():
         md = re.sub(r'{{\s*(core\.' + key + r')\s*}}', value, md)

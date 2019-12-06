@@ -3,7 +3,7 @@ venv
 
 static
 media
-!/site_page/static/
+!/django_press/static/
 
 *.pyc
 db.sqlite3
