@@ -1,6 +1,9 @@
+from django.contrib import admin
 from markdownx.admin import MarkdownxModelAdmin
 from django_press.models import PageContent, PageText
-from polymorphic.admin import StackedPolymorphicInline
+from polymorphic.admin import StackedPolymorphicInline, PolymorphicInlineSupportMixin
+
+from django_press.models.page.page import Page
 
 
 class PageContentInline(StackedPolymorphicInline):
@@ -13,5 +16,6 @@ class PageContentInline(StackedPolymorphicInline):
     )
 
 
-class PageAdmin(MarkdownxModelAdmin):
-    inlines = [PageContentInline, ]
+class PageAdmin(PolymorphicInlineSupportMixin, MarkdownxModelAdmin):
+    # inlines = [PageContentInline, ]
+    pass
