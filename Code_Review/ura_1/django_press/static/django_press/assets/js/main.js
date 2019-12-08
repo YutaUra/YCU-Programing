@@ -32,7 +32,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-
     /*---------------------------------------------*
      * WOW
      ---------------------------------------------*/
@@ -55,31 +54,30 @@ jQuery(document).ready(function ($) {
         type: 'iframe',
         mainClass: 'mfp-fade',
         iframe: {
-  markup: '<div class="mfp-iframe-scaler">'+
-            '<div class="mfp-close"></div>'+
-            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-          '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+            markup: '<div class="mfp-iframe-scaler">' +
+                '<div class="mfp-close"></div>' +
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
 
-  patterns: {
-    youtube: {
-      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
 
-      id: 'v=', // String that splits URL in a two parts, second part should be %id%
-      // Or null - full URL will be returned
-      // Or a function that should return %id%, for example:
-      // id: function(url) { return 'parsed id'; }
+                    id: 'v=', // String that splits URL in a two parts, second part should be %id%
+                    // Or null - full URL will be returned
+                    // Or a function that should return %id%, for example:
+                    // id: function(url) { return 'parsed id'; }
 
-      src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
-    }
-    // you may add here more sources
+                    src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+                }
+                // you may add here more sources
 
-  },
+            },
 
-  srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-}
- 
+            srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+        }
+
     });
-
 
 
 // slick slider active Home Page Tow
@@ -96,37 +94,16 @@ jQuery(document).ready(function ($) {
     });
 
 
-
 //    featured slider
     $('.featured_slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 3000,
         centerMode: true,
-        dote: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        speed: 1500,
-        index: 2,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
+        adaptiveHeight: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
-
 
 
 //---------------------------------------------
@@ -155,10 +132,7 @@ jQuery(document).ready(function ($) {
     });
 
 
-
-
-
-//About us accordion 
+//About us accordion
 
     $("#faq_main_content").collapse({
         accordion: true,
@@ -173,9 +147,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-
-
-
 //Team Skillbar active js
 
     jQuery('.teamskillbar').each(function () {
@@ -184,11 +155,6 @@ jQuery(document).ready(function ($) {
         }, 6000);
     });
 
-
-
-
-
-  
 
     //End
 

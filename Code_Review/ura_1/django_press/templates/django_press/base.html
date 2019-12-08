@@ -1,9 +1,7 @@
 {% load static %}
 {% load nav %}
-{% load filter %}
 <!doctype html>
 <html class="no-js" lang="ja">
-
 <head>
     <meta charset="utf-8">
     <title>{{ title }}</title>
@@ -17,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 
+    <link rel="stylesheet" href="{% static 'django_press/assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'django_press/assets/css/slick-theme.css' %}">
     <link rel="stylesheet" href="{% static 'django_press/assets/css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'django_press/assets/css/fonticons.css' %}">
     <link rel="stylesheet" href="{% static 'django_press/assets/css/font-awesome.min.css' %}">
@@ -26,18 +26,15 @@
 
 
     <!--For Plugins external css-->
-    <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+    <!--<link rel="stylesheet" href="{% static 'django_press/assets/css/plugins.css' %}" />-->
 
     <!--Theme custom css -->
     <link rel="stylesheet" href="{% static 'django_press/assets/css/style.css' %}">
-    <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
 
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="{% static 'django_press/assets/css/responsive.css' %}"/>
 
     <script src="{% static 'django_press/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
-
-    <link rel="stylesheet" href="{% static 'django_press/content.css' %}">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -58,52 +55,58 @@
 
 
 <div class="culmn">
-    <!--Home page style-->
 
+    <!--Home page style-->
+    {#  NavBar  #}
     {% nav core=core %}
 
-    <div class="container">
-        <div class="row">
-            <div class="main_featured m-top-100">
-                <div class="col-sm-12">
-                    <div class="head_title text-center" id="main_content">
-                        {% for content in contents %}
-                            {% markdown_to_html core=core md=content.content %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    {% for content in contents %}
+        {% include content.template_name %}
+    {% endfor %}
 
     <!-- scroll up-->
     <div class="scrollup">
         <a href="#"><i class="fa fa-chevron-up"></i></a>
-    </div><!-- End off scroll up -->
+    </div>
+    <!-- End off scroll up -->
 
+    {# footer #}
     {% include 'django_press/footer/main.html' %}
 
 </div>
 
-<!-- JS includes -->
-
-<script src="{% static 'django_press/assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
-<script src="{% static 'django_press/assets/js/vendor/bootstrap.min.js' %}"></script>
-<script src="{% static 'django_press/assets/js/jquery.magnific-popup.js' %}"></script>
-<script src="{% static 'django_press/assets/js/jquery.easing.1.3.js' %}"></script>
-<script src="{% static 'django_press/assets/js/slick.min.js' %}"></script>
-<script src="{% static 'django_press/assets/js/jquery.collapse.js' %}"></script>
-<script src="{% static 'django_press/assets/js/bootsnav.js' %}"></script>
-
-
-<!-- paradise slider js -->
+<div>
+    <!-- JS includes -->
+    <script src="{% static 'django_press/assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
+    <script src="{% static 'django_press/assets/js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'django_press/assets/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'django_press/assets/js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'django_press/assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'django_press/assets/js/jquery.collapse.js' %}"></script>
+    <script src="{% static 'django_press/assets/js/bootsnav.js' %}"></script>
 
 
-<script src="{% static 'django_press/assets/js/plugins.js' %}"></script>
-<script src="{% static 'django_press/assets/js/main.js' %}"></script>
+    <!-- paradise slider js -->
 
-{% block extrajs %}{% endblock %}
 
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyD_tAQD36pKp9v4at5AnpGbvBUsLCOSJx8"></script>
+    <script src="{% static 'django_press/assets/js/gmaps.min.js' %}"></script>
+
+    <script>
+        function showmap() {
+            var mapOptions = {
+                zoom: 8,
+                scrollwheel: false,
+                center: new google.maps.LatLng(-34.397, 150.644),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            $('.mapheight').css('height', '350');
+            $('.maps_text h3').hide();
+        }
+    </script>
+    <script src="{% static 'django_press/assets/js/plugins.js' %}"></script>
+    <script src="{% static 'django_press/assets/js/main.js' %}"></script>
+</div>
 </body>
 </html>

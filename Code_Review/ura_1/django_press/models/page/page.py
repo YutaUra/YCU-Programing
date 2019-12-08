@@ -6,6 +6,10 @@ class Page(models.Model):
     in_nav = models.BooleanField(default=False)
     path = models.CharField(max_length=100, unique=True, blank=True)
 
+    class Meta:
+        verbose_name = 'Webページ'
+        verbose_name_plural = 'Webページ'
+
     def __str__(self):
         return self.title
 

@@ -6,9 +6,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('markdownx/', include('markdownx.urls')),
+    *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
     path('', include('django_press.urls')),
 ]
-urlpatterns += static(
-    settings.MEDIA_URL,
-    document_root=settings.MEDIA_ROOT
-)
