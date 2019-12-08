@@ -13,6 +13,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_press.apps.DjangoPressConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -22,9 +24,6 @@ INSTALLED_APPS = [
 
     'polymorphic',
     'markdownx',
-
-    'django_press.apps.DjangoPressConfig',
-
 ]
 
 MIDDLEWARE = [
@@ -44,7 +43,7 @@ ROOT_URLCONF = 'pysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

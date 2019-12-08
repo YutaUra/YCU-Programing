@@ -17,8 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="{% static 'django_press/assets/css/slick.css' %}">
-    <link rel="stylesheet" href="{% static 'django_press/assets/css/slick-theme.css' %}">
     <link rel="stylesheet" href="{% static 'django_press/assets/css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'django_press/assets/css/fonticons.css' %}">
     <link rel="stylesheet" href="{% static 'django_press/assets/css/font-awesome.min.css' %}">
@@ -69,7 +67,9 @@
             <div class="main_featured m-top-100">
                 <div class="col-sm-12">
                     <div class="head_title text-center" id="main_content">
-                        {% markdown_to_html core=core md=content %}
+                        {% for content in contents %}
+                            {% markdown_to_html core=core md=content.content %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -90,7 +90,6 @@
 
 <script src="{% static 'django_press/assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
 <script src="{% static 'django_press/assets/js/vendor/bootstrap.min.js' %}"></script>
-
 <script src="{% static 'django_press/assets/js/jquery.magnific-popup.js' %}"></script>
 <script src="{% static 'django_press/assets/js/jquery.easing.1.3.js' %}"></script>
 <script src="{% static 'django_press/assets/js/slick.min.js' %}"></script>
@@ -101,8 +100,6 @@
 <!-- paradise slider js -->
 
 
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyD_tAQD36pKp9v4at5AnpGbvBUsLCOSJx8"></script>
-<script src="{% static 'django_press/assets/js/gmaps.min.js' %}"></script>
 <script src="{% static 'django_press/assets/js/plugins.js' %}"></script>
 <script src="{% static 'django_press/assets/js/main.js' %}"></script>
 
