@@ -36,4 +36,5 @@ class ImageSlider(PageContent):
         verbose_name='画像の高さ',
         help_text='デフォルトは30%です。',
         default='30%',
+        max_length=20,
     )
