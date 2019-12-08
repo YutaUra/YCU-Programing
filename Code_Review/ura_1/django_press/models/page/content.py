@@ -2,8 +2,9 @@ from django.db import models
 from markdownx.models import MarkdownxField
 from polymorphic.models import PolymorphicModel
 
-from django_press.models.page.files import ImageFile
-from django_press.models.page.service import Product
+from django_press.models.page.componets.files import ImageFile
+from django_press.models.page.componets.service import Product
+from django_press.models.page.componets.tab import TabElement
 from django_press.models.page.page import Page
 
 
@@ -71,3 +72,19 @@ class Service(PageContent):
     @property
     def products_all(self):
         return self.products.all()
+
+
+class Tab(PageContent):
+    template_name = 'django_press/fields/tab.html'
+
+    tabs = models.ManyToManyField(
+        to=TabElement,
+        verbose_name='タブ要素',
+    )
+
+    class Meta:
+        verbose_name = 'タブを使う'
+
+    @property
+    def tabs_all(self):
+        return self.tabs.all()

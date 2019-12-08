@@ -134,7 +134,7 @@ jQuery(document).ready(function ($) {
 
 //About us accordion
 
-    $("#faq_main_content").collapse({
+    $(".faq_main_content").collapse({
         accordion: true,
         open: function () {
             this.addClass("open");

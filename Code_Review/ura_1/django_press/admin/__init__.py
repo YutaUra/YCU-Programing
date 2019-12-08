@@ -4,9 +4,11 @@ from django.contrib.admin import ModelAdmin
 from .context import ContextAdmin
 from .page import PageAdmin
 from django_press.models import Page, Context
-from django_press.models.page.files import ImageFile
-from django_press.models.page.service import Product
+from django_press.models.page.componets.files import ImageFile
+from django_press.models.page.componets.service import Product
+from django_press.models.page.componets.tab import TabElement
 
+admin.site.register(TabElement, ModelAdmin)
 admin.site.register(Product, ModelAdmin)
 admin.site.register(ImageFile, ModelAdmin)
 admin.site.register(Page, PageAdmin)
