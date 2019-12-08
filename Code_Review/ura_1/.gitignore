@@ -1,0 +1,9 @@
+venv
+.idea
+
+static
+media
+!/django_press/static/
+
+*.pyc
+db.sqlite3
