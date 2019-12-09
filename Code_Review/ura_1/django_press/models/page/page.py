@@ -5,6 +5,14 @@ class Page(models.Model):
     title = models.CharField(max_length=100)
     in_nav = models.BooleanField(default=False)
     path = models.CharField(max_length=100, unique=True, blank=True)
+    parent_page = models.ForeignKey(
+        to='self',
+        on_delete=models.SET_NULL,
+        verbose_name='このページに親となるページ',
+        blank=True,
+        null=True,
+        help_text='パンくずリストの作成、SEO対策となります。'
+    )
 
     class Meta:
         verbose_name = 'Webページ'
@@ -22,3 +30,20 @@ class Page(models.Model):
     @property
     def url(self):
         return '/' + self.path
+
+    @property
+    def a_tag(self):
+        return f'a href="{self.url}" style="color: inherit">{self.title}</a>'
+
+    @property
+    def get_parents_node(self):
+        if self.parent_page:
+            return self.parent_page._get_parents_node([self])
+        else:
+            return [self]
+
+    def _get_parents_node(self, node):
+        if self.parent_page:
+            return self.parent_page._get_parents_node(node + [self])
+        else:
+            return reversed(node + [self])

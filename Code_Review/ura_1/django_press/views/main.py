@@ -11,5 +11,6 @@ class TestView(generic.TemplateView):
         path = kwargs.get('path', '')
         page = get_object_or_404(Page, path=path)
         context.update(title=page.title)
+        context.update(page=page)
         context.update(contents=page.contents.all())
         return context

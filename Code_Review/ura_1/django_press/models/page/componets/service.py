@@ -18,3 +18,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = '紹介する系'
+        verbose_name_plural = '紹介する系'

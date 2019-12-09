@@ -7,3 +7,7 @@ class ImageFile(models.Model):
 
     def __str__(self):
         return f'Image {self.name}'
+
+    class Meta:
+        verbose_name = '写真'
+        verbose_name_plural = '写真'

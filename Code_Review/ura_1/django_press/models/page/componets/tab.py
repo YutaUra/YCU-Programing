@@ -11,3 +11,7 @@ class TabElement(models.Model):
         verbose_name='タブの中身',
         help_text='Markdown、HTMLでの記述が可能です。ドラッグアンドドロップで画像の配置もできます。'
     )
+
+    class Meta:
+        verbose_name = 'タブ要素'
+        verbose_name_plural = 'タブ要素'

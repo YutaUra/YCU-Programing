@@ -1,8 +1,16 @@
 <nav class="navbar navbar-default navbar-fixed white navbar-dark bootsnav">
-
     <div class="container">
         <a class="navbar-brand" href="/">{{ core.site_name }}</a>
-
+        <span>
+        {% for p in  page.get_parents_node %}
+            {% if forloop.counter == 1 %}
+                <a href="{{ p.url }}" style="color: inherit">{{ p }}</a>
+            {% else %}
+                <i class="fa fa-angle-double-right" style="padding: 0 5px;"></i>
+                <a href="{{ p.url }}" style="color: inherit">{{ p }}</a>
+            {% endif %}
+        {% endfor %}
+        </span>
         <!-- Start Atribute Navigation -->
         <div class="attr-nav">
             <ul>
@@ -10,7 +18,6 @@
             </ul>
         </div>
         <!-- End Atribute Navigation -->
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
@@ -20,8 +27,6 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
-
-
     <!-- Start Side Menu -->
     <div class="side">
         <a href="#" class="close-side"><i class="fa fa-times"></i></a>
@@ -35,5 +40,4 @@
         </div>
     </div>
     <!-- End Side Menu -->
-
 </nav>
