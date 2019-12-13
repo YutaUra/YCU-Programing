@@ -2,6 +2,7 @@ from django.db import models
 from markdownx.models import MarkdownxField
 from polymorphic.models import PolymorphicModel
 
+from django_press.models.forms import Form
 from django_press.models.page.componets.files import ImageFile
 from django_press.models.page.componets.service import Product
 from django_press.models.page.componets.tab import TabElement
@@ -88,3 +89,16 @@ class Tab(PageContent):
     @property
     def tabs_all(self):
         return self.tabs.all()
+
+
+class Contact(PageContent):
+    template_name = 'django_press/fields/contact.html'
+
+    form = models.ForeignKey(
+        to=Form,
+        on_delete=models.PROTECT,
+        verbose_name='フォーム'
+    )
+
+    class Meta:
+        verbose_name = 'フォームを使う'

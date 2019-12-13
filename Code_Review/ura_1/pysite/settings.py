@@ -113,3 +113,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MARKDOWNX_MARKDOWN_EXTENSIONS = [
     'markdown.extensions.extra'
 ]
+
+# widget renderer
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'

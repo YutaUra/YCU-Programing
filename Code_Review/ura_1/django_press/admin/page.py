@@ -1,5 +1,5 @@
 from markdownx.admin import MarkdownxModelAdmin
-from django_press.models import PageContent, PageText, ImageSlider, Service, Tab
+from django_press.models import PageContent, PageText, ImageSlider, Service, Tab, Contact
 from polymorphic.admin import StackedPolymorphicInline, PolymorphicInlineSupportMixin
 
 
@@ -16,12 +16,16 @@ class PageContentInline(StackedPolymorphicInline):
     class TabInline(StackedPolymorphicInline.Child):
         model = Tab
 
+    class ContactInline(StackedPolymorphicInline.Child):
+        model = Contact
+
     model = PageContent
     child_inlines = (
         PageTextInline,
         ImageSliderInline,
         ServiceInline,
         TabInline,
+        ContactInline,
     )
 
 
