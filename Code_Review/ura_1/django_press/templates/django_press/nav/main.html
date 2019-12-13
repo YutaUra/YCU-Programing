@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed white navbar-dark bootsnav">
     <div class="container">
-        <a class="navbar-brand" href="/">{{ core.site_name }}</a>
-        <span>
+        <a class="navbar-brand text-black-50" href="/">{{ core.site_name }}</a>
+        <span class="m-auto">
         {% for p in  page.get_parents_node %}
             {% if forloop.counter == 1 %}
                 <a href="{{ p.url }}" style="color: inherit">{{ p }}</a>
