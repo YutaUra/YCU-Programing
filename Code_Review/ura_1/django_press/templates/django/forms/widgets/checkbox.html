@@ -1,1 +1,4 @@
+{% with field=widget.attrs.field %}
+    <label class="cus">{{ field.label }}{{ field.label_suffix }}</label>
     {% include "django/forms/widgets/input.html" %}
+{% endwith %}
