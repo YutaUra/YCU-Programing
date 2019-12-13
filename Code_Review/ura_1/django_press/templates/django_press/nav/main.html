@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed white navbar-dark bootsnav">
+<nav class="navbar navbar-expand-sm navbar-fixed white navbar-dark bootsnav">
     <div class="container">
         <a class="navbar-brand text-black-50" href="/">{{ core.site_name }}</a>
         <span class="m-auto">
@@ -11,6 +11,14 @@
             {% endif %}
         {% endfor %}
         </span>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="navbar-nav ml-auto navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                {% for page in nav_pages %}
+                    <li class="nav-item"><a class="text-black nav-link" href="/{{ page.path }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div><!-- /.navbar-collapse -->
         <!-- Start Atribute Navigation -->
         <div class="attr-nav">
             <ul>
@@ -18,14 +26,6 @@
             </ul>
         </div>
         <!-- End Atribute Navigation -->
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-menu">
-            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                {% for page in nav_pages %}
-                    <li><a href="/{{ page.path }}">{{ page.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div><!-- /.navbar-collapse -->
     </div>
     <!-- Start Side Menu -->
     <div class="side">
