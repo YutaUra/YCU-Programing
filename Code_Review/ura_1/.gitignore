@@ -7,3 +7,6 @@ media
 
 *.pyc
 db.sqlite3
+data.json
+.pypirc
+
