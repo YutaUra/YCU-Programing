@@ -1,1 +1,1 @@
-from .main import TestView
+from .main import PageView, inquiry_view

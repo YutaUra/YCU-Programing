@@ -1,0 +1,40 @@
+[
+  {
+    "model": "django_press.context",
+    "pk": 1,
+    "fields": {
+      "key": "site_name",
+      "value": "\u30b5\u30a4\u30c8"
+    }
+  },
+  {
+    "model": "django_press.page",
+    "pk": 1,
+    "fields": {
+      "title": "\u30c8\u30c3\u30d7",
+      "in_nav": true,
+      "path": "",
+      "parent_page": null
+    }
+  },
+  {
+    "model": "django_press.page",
+    "pk": 2,
+    "fields": {
+      "title": "\u6982\u8981",
+      "in_nav": true,
+      "path": "about",
+      "parent_page": 1
+    }
+  },
+  {
+    "model": "django_press.page",
+    "pk": 3,
+    "fields": {
+      "title": "\u304a\u554f\u3044\u5408\u308f\u305b",
+      "in_nav": true,
+      "path": "contact",
+      "parent_page": 1
+    }
+  }
+]

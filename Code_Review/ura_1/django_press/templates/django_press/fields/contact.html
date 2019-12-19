@@ -2,10 +2,11 @@
 <section id="contact" class="contact bg-mega fix">
     <div class="container">
         <div class="row">
-            <div class="main_contact roomy-100 text-white">
+            <div class="main_contact roomy-40 text-white">
                 <div class="col-md-12 sm-m-top-30">
-                    {% with form=content.form.form_class %}
-                        <form action="" method="post">
+                    {% with form=content.form_instance %}
+                        <form action="{% url 'Inquiry' path=content.page.path %}?p={{ content.priority }}"
+                              method="post">
                             <div class="row">
                                 {{ form.non_field_errors }}
                                 {% for field in form %}

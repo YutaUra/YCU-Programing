@@ -1,8 +1,9 @@
 from django.db import models
+import importlib
 from markdownx.models import MarkdownxField
 from polymorphic.models import PolymorphicModel
 
-from django_press.models.forms import Form
+from django_press.models.Inquiry.base import BaseInquiry
 from django_press.models.page.componets.files import ImageFile
 from django_press.models.page.componets.service import Product
 from django_press.models.page.componets.tab import TabElement
@@ -91,14 +92,30 @@ class Tab(PageContent):
         return self.tabs.all()
 
 
-class Contact(PageContent):
+class ContactContent(PageContent):
     template_name = 'django_press/fields/contact.html'
 
-    form = models.ForeignKey(
-        to=Form,
-        on_delete=models.PROTECT,
-        verbose_name='フォーム'
+    form = models.CharField(
+        max_length=100,
+        choices=((inquiry.__module__, inquiry.__name__) for inquiry in BaseInquiry.__subclasses__())
     )
 
+    success_page = models.ForeignKey(
+        to='Page',
+        on_delete=models.PROTECT,
+        default=1
+    )
+
+    def get_inquiry_model(self):
+        module = importlib.import_module(self.form)
+        return getattr(module, self.get_form_display())
+
+    def get_inquiry_form_class(self):
+        return self.get_inquiry_model().create_form()
+
+    @property
+    def form_instance(self):
+        return self.get_inquiry_form_class()()
+
     class Meta:
-        verbose_name = 'フォームを使う'
+        verbose_name = '問い合わせを使う'
