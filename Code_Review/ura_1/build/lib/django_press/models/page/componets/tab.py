@@ -15,3 +15,6 @@ class TabElement(models.Model):
     class Meta:
         verbose_name = 'タブ要素'
         verbose_name_plural = 'タブ要素'
+
+    def __str__(self):
+        return self.title

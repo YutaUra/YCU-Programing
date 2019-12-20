@@ -7,6 +7,7 @@ django_press/urls.py
 django_press.egg-info/PKG-INFO
 django_press.egg-info/SOURCES.txt
 django_press.egg-info/dependency_links.txt
+django_press.egg-info/requires.txt
 django_press.egg-info/top_level.txt
 django_press/__pycache__/__init__.cpython-36.pyc
 django_press/__pycache__/apps.cpython-36.pyc
@@ -30,6 +31,7 @@ django_press/migrations/0004_auto_20191220_0400.py
 django_press/migrations/0005_auto_20191220_0421.py
 django_press/migrations/0006_auto_20191220_0422.py
 django_press/migrations/0007_contactcontent_success_page.py
+django_press/migrations/0008_tab_name.py
 django_press/migrations/__init__.py
 django_press/migrations/__pycache__/0001_initial.cpython-36.pyc
 django_press/migrations/__pycache__/0002_auto_20191220_0223.cpython-36.pyc
@@ -38,6 +40,7 @@ django_press/migrations/__pycache__/0004_auto_20191220_0400.cpython-36.pyc
 django_press/migrations/__pycache__/0005_auto_20191220_0421.cpython-36.pyc
 django_press/migrations/__pycache__/0006_auto_20191220_0422.cpython-36.pyc
 django_press/migrations/__pycache__/0007_contactcontent_success_page.cpython-36.pyc
+django_press/migrations/__pycache__/0008_tab_name.cpython-36.pyc
 django_press/migrations/__pycache__/__init__.cpython-36.pyc
 django_press/models/__init__.py
 django_press/models/context.py
@@ -79,12 +82,18 @@ django_press/static/django_press/assets/css/bootstrap.min.css
 django_press/static/django_press/assets/css/bootstrap.min.css.map
 django_press/static/django_press/assets/css/font-awesome.min.css
 django_press/static/django_press/assets/css/fonticons.css
+django_press/static/django_press/assets/css/icofont.min.css
 django_press/static/django_press/assets/css/magnific-popup.css
 django_press/static/django_press/assets/css/plugins.css
 django_press/static/django_press/assets/css/responsive.css
 django_press/static/django_press/assets/css/slick-theme.css
 django_press/static/django_press/assets/css/slick.css
 django_press/static/django_press/assets/css/style.css
+django_press/static/django_press/assets/css/fonts/icofont.eot
+django_press/static/django_press/assets/css/fonts/icofont.svg
+django_press/static/django_press/assets/css/fonts/icofont.ttf
+django_press/static/django_press/assets/css/fonts/icofont.woff
+django_press/static/django_press/assets/css/fonts/icofont.woff2
 django_press/static/django_press/assets/css/fonts/slick.eot
 django_press/static/django_press/assets/css/fonts/slick.svg
 django_press/static/django_press/assets/css/fonts/slick.ttf
@@ -95,10 +104,6 @@ django_press/static/django_press/assets/fonts/fontawesome-webfont.svg
 django_press/static/django_press/assets/fonts/fontawesome-webfont.ttf
 django_press/static/django_press/assets/fonts/fontawesome-webfont.woff
 django_press/static/django_press/assets/fonts/fontawesome-webfont.woff2
-django_press/static/django_press/assets/fonts/icofont.eot
-django_press/static/django_press/assets/fonts/icofont.svg
-django_press/static/django_press/assets/fonts/icofont.ttf
-django_press/static/django_press/assets/fonts/icofont.woff
 django_press/static/django_press/assets/image_slider/css/component.css
 django_press/static/django_press/assets/image_slider/css/normalize.css
 django_press/static/django_press/assets/image_slider/js/boxesFx.js

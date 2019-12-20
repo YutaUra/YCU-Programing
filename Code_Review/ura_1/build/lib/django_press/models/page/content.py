@@ -79,6 +79,8 @@ class Service(PageContent):
 class Tab(PageContent):
     template_name = 'django_press/fields/tab.html'
 
+    name = models.CharField(max_length=50,null=True)
+
     tabs = models.ManyToManyField(
         to=TabElement,
         verbose_name='タブ要素',
@@ -86,6 +88,9 @@ class Tab(PageContent):
 
     class Meta:
         verbose_name = 'タブを使う'
+
+    def __str__(self):
+        return self.name
 
     @property
     def tabs_all(self):
