@@ -24,7 +24,6 @@ INSTALLED_APPS = [
 
     'polymorphic',
     'markdownx',
-    'crud',
 ]
 
 MIDDLEWARE = [
