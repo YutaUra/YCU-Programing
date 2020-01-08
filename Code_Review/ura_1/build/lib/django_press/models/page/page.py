@@ -13,6 +13,10 @@ class Page(models.Model):
         null=True,
         help_text='パンくずリストの作成、SEO対策となります。'
     )
+    publish = models.BooleanField(
+        '公開設定',
+        default=True,
+    )
 
     class Meta:
         verbose_name = 'Webページ'

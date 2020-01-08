@@ -10,10 +10,12 @@ class Mixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         path = kwargs.get('path', '')
-        page = get_object_or_404(Page, path=path)
-        context.update(title=page.title)
-        context.update(page=page)
-        context.update(contents=page.contents.all())
+        page = get_object_or_404(Page, path=path, publish=True)
+        context.update(
+            title=page.title,
+            page=page,
+            contents=page.contents.all(),
+        )
         return context
 
 
