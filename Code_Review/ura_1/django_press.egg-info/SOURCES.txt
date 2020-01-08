@@ -33,6 +33,7 @@ django_press/migrations/0006_auto_20191220_0422.py
 django_press/migrations/0007_contactcontent_success_page.py
 django_press/migrations/0008_tab_name.py
 django_press/migrations/0009_page_publish.py
+django_press/migrations/0010_auto_20200108_1729.py
 django_press/migrations/__init__.py
 django_press/migrations/__pycache__/0001_initial.cpython-36.pyc
 django_press/migrations/__pycache__/0002_auto_20191220_0223.cpython-36.pyc
@@ -43,6 +44,7 @@ django_press/migrations/__pycache__/0006_auto_20191220_0422.cpython-36.pyc
 django_press/migrations/__pycache__/0007_contactcontent_success_page.cpython-36.pyc
 django_press/migrations/__pycache__/0008_tab_name.cpython-36.pyc
 django_press/migrations/__pycache__/0009_page_publish.cpython-36.pyc
+django_press/migrations/__pycache__/0010_auto_20200108_1729.cpython-36.pyc
 django_press/migrations/__pycache__/__init__.cpython-36.pyc
 django_press/models/__init__.py
 django_press/models/context.py

@@ -78,7 +78,7 @@ class Service(PageContent):
 
 class Tab(PageContent):
     template_name = 'django_press/fields/tab.html'
-    name = models.CharField(max_length=50, null=True)
+    name = models.CharField(max_length=50, default='')
     tabs = models.ManyToManyField(
         to=TabElement,
         verbose_name='タブ要素',
