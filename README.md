@@ -1,3 +1,6 @@
+# Archived！
+横浜市立大学プログラミングの会は横浜市立大学公認サークル[Engine](https://github.com/ycu-engine)として新たに活動をはじめました。
+
 # YCU-Programing
 横浜市立大学のプログラミングの会です
 
